@@ -1,11 +1,34 @@
 url: ""
 markdown: kramdown
 
+permalink: /post/:title/
 paginate: 5
 paginate_path: "/page:num"
 
 gems:
   - jekyll-feed
   - jekyll-paginate
+
+collections:
+  my_categories:
+    output: true
+    permalink: /category/:name/
+  my_tags:
+    output: true
+    permalink: /tag/:name
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: my_categories
+    values:
+      layout: blog_by_category
+  -
+    scope:
+      path: ""
+      type: my_tags
+    values:
+      layout: blog_by_tag
 
 exclude: [vendor]

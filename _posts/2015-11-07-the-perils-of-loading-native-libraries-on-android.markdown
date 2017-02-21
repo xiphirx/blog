@@ -1,8 +1,9 @@
 ---
 layout: post
-title:  "The Perils of Loading Native Libraries on Android"
-date:   2015-11-07 23:10:00 -0800
-tags: android jni relinker crypto
+title: "The Perils of Loading Native Libraries on Android"
+date: 2015-11-07 23:10:00 -0800
+category: programming
+tags: [android, relinker]
 ---
 
 *[This article was originally published on the Keepsafe Engineering blog](https://medium.com/keepsafe-engineering/the-perils-of-loading-native-libraries-on-android-befa49dce2db)*.
