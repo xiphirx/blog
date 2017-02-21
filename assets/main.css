@@ -65,7 +65,7 @@ header {
 }
 
 .metadata {
-  color: #444;
+  color: #666;
   font-variant: small-caps;
 }
 
@@ -108,6 +108,6 @@ blockquote {
   font-style: italic;
   font-size: 28px;
   color: #777;
-  border-left: 2px solid #999;
+  border-left: 2px solid #0f617a;
   padding-left: 16px;
 }

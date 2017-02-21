@@ -1,12 +1,11 @@
 ---
 layout: post
 title:  "The Perils of Loading Native Libraries on Android"
-description: While implementing an encryption scheme for the Keepsafe Photos app, I encountered some very peculiar errors.
 date:   2015-11-07 23:10:00 -0800
 tags: android jni relinker crypto
 ---
 
-*[This article was originally published on the Keepsafe Engineering blog](https://medium.com/keepsafe-engineering/the-perils-of-loading-native-libraries-on-android-befa49dce2db)*
+*[This article was originally published on the Keepsafe Engineering blog](https://medium.com/keepsafe-engineering/the-perils-of-loading-native-libraries-on-android-befa49dce2db)*.
 
 Back in 2012, during the early days of [Keepsafe](https://www.getkeepsafe.com/), we sought to implement an encryption scheme for our Android App. Through many iterations and prototypes, we found a sweet spot of sorts by leveraging the power of the [JNI](http://docs.oracle.com/javase/8/docs/technotes/guides/jni/) (Java Native Interface.) We decided to write our interface into the encryption library we utilized in Java, calling into the library via the JNI solely for the purpose of encryption and decryption. We opted for an on-the-fly solution, minimizing the impact on user experience as much as possible. Once we were happy with our solution, we decided to deploy it into our production app. We rigorously tested our code and were confident that everything would go smoothly; that is, until things beyond our control broke.
 
