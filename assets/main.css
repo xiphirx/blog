@@ -1,5 +1,8 @@
 body {
   background-color: #111;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 1.58;
 }
 
 #main-wrapper {
@@ -53,8 +56,12 @@ h5 a {
   text-decoration: none;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  color: #FAFAFA;
+}
+
 header {
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 
 .metadata {
@@ -99,8 +106,8 @@ pre > code {
 
 blockquote {
   font-style: italic;
-  font-size: 22px;
-  color: #999;
+  font-size: 28px;
+  color: #777;
   border-left: 2px solid #999;
   padding-left: 16px;
 }

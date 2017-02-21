@@ -56,13 +56,13 @@ There was no clear pattern as to *what* library was at fault as it seemed *all* 
 
 We gathered that, yes, the native libraries were not there, it was not some weird fluke with the System class or file system error, and that user’s devices were seemingly normal.
 
-##### Idea #1 — User Devices are Running out of Space
+#### Idea #1 — User Devices are Running out of Space
 As we thought through the possible causes for this exception, we started to think that maybe people just had no room for the native library to be installed correctly, and thus it never was installed. A quick diagnostic check before attempting to load the libraries proved this idea wrong *very* quickly. Users had more than enough space on their device for the libraries we were shipping.
 
-##### Idea #2 — Native Libraries were not being included in Updates
+#### Idea #2 — Native Libraries were not being included in Updates
 The second plausible cause for our problem was that Google Play was mangling our APK when serving it to users’ devices. We had some reinforcement for this idea after reading such reports as [this one](https://code.google.com/p/android/issues/detail?id=35962), detailing that Google Play supposedly sent out a notice to all app developers affected by an issue preventing users from launching their apps after an update due to native libraries being incorrectly installed. The only problem was that this report was in August, and we were dealing with the problem months later. We also never received a notice from Google Play mentioning any sort of error on their part. Additionally, this is something that would be very hard to verify.
 
-##### Idea #3 — Debug the issue directly with a real user
+#### Idea #3 — Debug the issue directly with a real user
 Since we were unable to reproduce the issue on any of the 10+ devices of ranging variety we had on hand, we decided that we would reach out to a user who was experiencing the problem. One user graciously decided to help us and noted that the app was working fine prior to the latest update. The problem here was that the app version the user noted as working was a version that included our encryption code and native libraries, just to add to our confusion and the overarching puzzle. We decided to supply the user with an APK file directly, where we verified that all native libraries were present in the APK file. The user installed the APK, launched the app, and ran directly into the same UnsatisfiedLinkError exception again. This confirmed that Google Play was not the issue, the issue was with Android’s PackageManager installation process. At some point during the installation, something would go wrong and the native libraries inside of the APK would not be extracted.
 
 >[…] the issue was with Android’s PackageManager installation process.
