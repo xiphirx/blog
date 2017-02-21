@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+  <body>
+    <div class="container" id="main-wrapper">
+      {% include header.html %}
+      <h5><a href="{{ page.url }}">{{ page.title }}</a></h5>
+      <div class="content">
+        <span class="metadata">
+          {{ page.date | date: "%B %-d, %Y" }} 
+          -
+          {% for tag in page.tags %}
+            <a href="{{ 'tag/' | relative_url }}{{ tag }}">{{ tag }}</a>
+          {% endfor %}
+        </span>
+        <hr />
+        {{ content }}
+      </div>
+    </div>
+  </body>
+</html>

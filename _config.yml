@@ -1,1 +1,11 @@
-theme: jekyll-theme-midnight
+url: ""
+markdown: kramdown
+
+paginate: 5
+paginate_path: "/page:num"
+
+gems:
+  - jekyll-feed
+  - jekyll-paginate
+
+exclude: [vendor]

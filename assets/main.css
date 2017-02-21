@@ -1,0 +1,106 @@
+body {
+  background-color: #111;
+}
+
+#main-wrapper {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+#title-name {
+  letter-spacing: 0.25rem;
+  text-transform: uppercase;
+  color: #DDD;
+}
+
+#title-name a {
+  color: #DDD;
+  text-decoration: none;
+}
+
+#title-nav {
+  padding-top: 16px;
+}
+
+.nav-icon {
+  width: 32px;
+  height: 32px;
+  padding-left: 16px;
+}
+
+a.nav-link {
+  position: relative;
+  display: inline-block;
+}
+
+a.nav-link:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+hr {
+  border: none;
+  height: 2px;
+  background-color: #444;
+}
+
+h5 a {
+  color: #DDD;
+  text-decoration: none;
+}
+
+header {
+  margin-bottom: 100px;
+}
+
+.metadata {
+  color: #444;
+  font-variant: small-caps;
+}
+
+.content {
+  color: #AAA;
+}
+
+.content hr {
+  height: 1px;
+  background-color: #222;
+}
+
+.content p img {
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.content span.caption {
+  font-size: 12px;
+  text-align: center;
+  display: block;
+}
+
+code {
+  background: #222;
+  border: 1px solid #000;
+  border-radius: 2px;
+}
+
+pre {
+  overflow: inherit;
+}
+
+pre > code {
+  white-space: pre-wrap;
+  padding: 16px;
+}
+
+blockquote {
+  font-style: italic;
+  font-size: 22px;
+  color: #999;
+  border-left: 2px solid #999;
+  padding-left: 16px;
+}

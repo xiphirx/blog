@@ -1,0 +1,29 @@
+---
+title: Blog
+layout: default
+---
+
+{% for post in paginator.posts %}
+  <h5><a href="{{ post.url }}">{{ post.title }}</a></h5>
+  <div class="content">
+    <p>
+      {{ post.description }}
+    </p>
+
+    <span class="metadata">
+      {{ post.date | date: "%B %-d, %Y" }} 
+      - 
+      {% capture words %}
+        {{ post.content | number_of_words }}
+      {% endcapture %}
+      {% unless words contains "-" %}
+          {{ words | plus: 250 | divided_by: 250 | append: " minute read" }}
+      {% endunless %} 
+      -
+      {% for tag in post.tags %}
+        <a href="{{ 'tag/' | relative_url }}{{ tag }}">{{ tag }}</a>
+      {% endfor %}
+    </span>
+    <hr />
+  </div>
+{% endfor %}
