@@ -1,17 +1,15 @@
 <header>
   <div class="row">
+    <a href="/about" id="nav-me" class="nav-link">
+      <img src="/assets/img/me.jpg" alt="About me"/>
+    </a>
     <h1 id="title-name" class="u-pull-left"><a href="/">Hilal Alsibai</a></h1>
     <nav id="title-nav" class="u-pull-right">
-      <a href="https://github.com/xiphirx" class="nav-link">
-        <object type="image/svg+xml" data="/assets/svg/github-icon.svg" class="nav-icon">
-          GitHub
-        </object>
+      {% for profile in site.profiles %}
+      <a href="{{ profile.url }}" class="nav-link">
+        {% include {{ profile.icon | prepend: 'svg/' | append: '.svg' }} %}
       </a>
-      <a href="https://www.linkedin.com/in/xiphirx" class="nav-link">
-        <object type="image/svg+xml" data="/assets/svg/linkedin-icon.svg" class="nav-icon">
-          LinkedIn
-        </object>
-      </a>
+      {% endfor %}
     </nav>
   </div>
   <hr/>

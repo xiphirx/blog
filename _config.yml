@@ -18,17 +18,23 @@ collections:
     permalink: /tag/:name
 
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
       type: my_categories
     values:
       layout: blog_by_category
-  -
-    scope:
+  - scope:
       path: ""
       type: my_tags
     values:
       layout: blog_by_tag
+
+profiles:
+  - title: GitHub
+    url: https://github.com/xiphirx
+    icon: github
+  - title: LinkedIn
+    url: https://www.linkedin.com/in/xiphirx
+    icon: linkedin
 
 exclude: [vendor]

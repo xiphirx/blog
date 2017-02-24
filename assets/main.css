@@ -2,7 +2,14 @@ body {
   background-color: #111;
   font-weight: 400;
   font-size: 21px;
-  line-height: 1.58;
+}
+
+a {
+  color: #8BD;
+}
+
+a:hover {
+  color: #69B;
 }
 
 #main-wrapper {
@@ -21,19 +28,36 @@ body {
   text-decoration: none;
 }
 
-#title-nav {
-  padding-top: 16px;
-}
-
 .nav-icon {
   width: 32px;
   height: 32px;
+}
+
+#title-nav {
+  padding-top: 5px;
+}
+
+#nav-me {
+  padding-top: 5px;
   padding-left: 16px;
+}
+
+#nav-me img {
+  width: 48px;
+  height: 48px;
+  border-radius: 7px;
+  filter: grayscale(1);
+}
+
+#nav-me:hover img {
+  border-radius: 7px;
+  filter: none;
 }
 
 a.nav-link {
   position: relative;
   display: inline-block;
+  margin-left: 16px;
 }
 
 a.nav-link:after {
@@ -48,7 +72,7 @@ a.nav-link:after {
 hr {
   border: none;
   height: 2px;
-  background-color: #444;
+  background-color: #478;
 }
 
 h4 a {
@@ -75,7 +99,7 @@ header {
 
 .content hr {
   height: 1px;
-  background-color: #222;
+  background: #222;
 }
 
 .content p img {
@@ -110,4 +134,21 @@ blockquote {
   color: #777;
   border-left: 2px solid #0f617a;
   padding-left: 16px;
+}
+
+footer {
+  font-size: 12px;
+  color: #777;
+}
+
+ul {
+  list-style: initial;
+}
+
+#about-me {
+  margin-left: 16px;
+  float: right;
+  width: 200px;
+  height: 200px;
+  border-radius: 7px
 }
