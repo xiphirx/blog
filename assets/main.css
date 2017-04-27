@@ -152,3 +152,7 @@ ul {
   height: 200px;
   border-radius: 7px
 }
+
+figure {
+  margin: 0;
+}
