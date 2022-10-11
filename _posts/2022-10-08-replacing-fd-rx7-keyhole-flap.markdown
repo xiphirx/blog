@@ -14,11 +14,11 @@ So I decided to take matters into my own hands by fabricating my own flap. The o
 
 <img src="/assets/img/rx7_keyhole_flap.jpg" alt="" />
 
-A. 17mm
-B. 6mm
-C. 13mm
-D. 4.5mm
-E. 3mm
+- A. 17mm
+- B. 6mm
+- C. 13mm
+- D. 4.5mm
+- E. 3mm
 
 Armed with this information, I quickly modeled something in Fusion 360 and sent it off to my Prusa MK3S to print. I chose a clear PETG both because I want the light to be diffused/seen and for PETG's strength properties.
 
