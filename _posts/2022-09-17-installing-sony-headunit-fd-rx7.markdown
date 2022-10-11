@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Installing a Sony XAV-AX6000 Headunit in a FD RX-7"
-date: 2012-09-17 21:18:00 -0800
+date: 2022-09-17 21:18:00 -0800
 category: rx7
 tags: [tutorial]
 ---
